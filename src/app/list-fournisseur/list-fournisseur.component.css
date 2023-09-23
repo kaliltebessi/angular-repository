@@ -1,0 +1,8 @@
+
+  
+.listFournisseur {
+    padding: 10px; /* Add padding for the content inside each item */
+    border: 1px solid #000; /* Border style for each container */
+    margin-bottom: 10px; /* Add margin to separate each item */
+  }
+  

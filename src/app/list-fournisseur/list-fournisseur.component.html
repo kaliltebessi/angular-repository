@@ -1,0 +1,17 @@
+<p>list-fournisseur works!</p>
+
+
+
+<div *ngFor="let f of list">
+    <div 
+    ngClass="listFournisseur" 
+     *ngIf="f.idFournisseur && f.idFournisseur <= 100 " 
+     [ngStyle]="{'background-color': f.libelle === 'hp' ? 'green' : 'yellow',}"
+     (dblclick)="supprimerFournisseur(f)" >
+
+        <p >idFournisseur: {{f.idFournisseur}}</p>
+        <p  [ngStyle]="{'font-weight': getColor(f) ? 'bold' : 'normal'}">Code: {{f.code}}</p>
+        <p>Libelle: {{f.libelle}}</p>
+    </div>
+
+    </div>
