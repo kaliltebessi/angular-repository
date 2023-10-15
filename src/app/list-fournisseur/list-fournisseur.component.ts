@@ -28,7 +28,7 @@ export class ListFournisseurComponent {
     }
 
     supprimerFournisseur(fournisseur: Fournisseur) {
-      this.list = this.list.filter(f => f !== fournisseur);
+      this.list = this.list.filter(f => f != fournisseur);
     }
 
 }

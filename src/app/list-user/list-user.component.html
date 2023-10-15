@@ -1,0 +1,49 @@
+<p>list-user works!</p>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+				<input type="search"  #userIdSearchInput class="form-control rounded" placeholder="enter the account category" [style]="{'width':'20%'}"  />
+				<button type="button" (click)="rechercheParCategorie(userIdSearchInput.value)" class="btn btn-outline-primary">search</button>
+				<table class="table user-list">
+					<thead>
+						<tr >
+							<th><span>User</span></th>
+							<th><span>Created</span></th>
+							<th class="text-center"><span>Status</span></th>
+							<th><span>Email</span></th>
+							<th><span>action</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor=" let u of listfiltree ">
+							<td>
+								<img src="{{u.picture}}" alt="">
+								<a href="#" class="user-link">{{u.firstName}}  {{u.lastName}}</a>
+								<span class="user-subhead">{{u.accountCategory}}</span>
+							</td>
+							<td>
+								{{u.birthDate}}
+							</td>
+							<td class="text-center">
+								<span class="label label-default">Inactive</span>
+							</td>
+							<td>
+								<a href="#">{{u.email}}</a>
+							</td>
+							<td style="width: 20%;">
+								<button [disabled]="u.accountCategory === 'Admin'" (click)="Supprimer(u)">Delete</button>
+							</td>
+						</tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    

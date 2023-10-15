@@ -3,7 +3,7 @@
 
 
 <div *ngFor="let f of list">
-    <div 
+    <div class="card"
     ngClass="listFournisseur" 
      *ngIf="f.idFournisseur && f.idFournisseur <= 100 " 
      [ngStyle]="{'background-color': f.libelle === 'hp' ? 'green' : 'yellow',}"

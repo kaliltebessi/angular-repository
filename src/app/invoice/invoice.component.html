@@ -1,0 +1,19 @@
+<p>invoice works!</p>
+
+
+<div *ngIf=" active == true ">
+    <h2>Détails de la facture {{ idFacture }}</h2>
+    <p>ID Facture : {{ idFacture }}</p>
+    <p>Montant de la facture : {{montantFacture}}</p> <!-- Ajoutez les détails de la facture ici -->
+    <p>Montant de la remise : {{montantRemise}}  </p>
+    <p>Date de la facture : {{dateFacture}}  </p>
+    <p>Actif : {{ active }}</p>
+  </div>
+
+  <div *ngIf=" active == false "> 
+    <h3> Impossible de visualiser les détails de la facture !! </h3>
+
+  </div>
+
+  <a [routerLink]="['/invoices']">Retour</a>
+  
